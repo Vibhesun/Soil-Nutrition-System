@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive Soil Nutrition System demo for soil nutrient monitoring, IoT workflow, and crop-care recommendations." />
+  <title>Soil Nutrition System | Smart Agriculture</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Soil Nutrition System home">
+      <span class="brand-mark">✿</span><span>Soil Nutrition <b>System</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#workflow">How it works</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#contact">Project details</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> SMART AGRICULTURE • IOT • SOIL HEALTH</p>
+        <h1>Understand your soil.<br /><span>Grow smarter.</span></h1>
+        <p class="hero-text">A web application concept for monitoring soil conditions, understanding nutrient balance, and helping farmers make better crop-care decisions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#dashboard">Explore dashboard <span>↗</span></a>
+          <a class="btn btn-outline" href="#workflow">See how it works</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">i</span> Demo mode: sample values are simulated in your browser.</div>
+      </div>
+      <div class="hero-visual" aria-label="Illustration of a growing seedling and soil sensor">
+        <div class="sun-glow"></div>
+        <div class="plant">
+          <div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="stem"></div>
+          <div class="soil-line"></div><div class="root root-one"></div><div class="root root-two"></div>
+        </div>
+        <div class="sensor-device"><span class="sensor-light"></span><span class="sensor-logo">✿</span><span class="sensor-wifi">⌁</span><div class="probe probe-a"></div><div class="probe probe-b"></div><div class="probe probe-c"></div></div>
+        <div class="floating-chip chip-top"><span>●</span> Sensor ready <b>DEMO</b></div>
+        <div class="floating-chip chip-bottom"><small>SOIL HEALTH INDEX</small><strong id="heroHealth">78<span>/100</span></strong><div class="mini-track"><i id="heroHealthBar"></i></div></div>
+        <div class="visual-caption">Illustrative IoT soil monitoring setup</div>
+      </div>
+    </section>
+
+    <section class="metrics-strip" aria-label="Key soil indicators">
+      <div class="metric-intro"><span class="tiny-leaf">✿</span><div><strong>Soil indicators</strong><small>Sample readings • update in demo dashboard</small></div></div>
+      <div class="strip-metric"><span class="metric-dot green"></span><div><small>Moisture</small><strong id="stripMoisture">56%</strong></div></div>
+      <div class="strip-metric"><span class="metric-dot blue"></span><div><small>Temperature</small><strong id="stripTemp">27°C</strong></div></div>
+      <div class="strip-metric"><span class="metric-dot amber"></span><div><small>Soil pH</small><strong id="stripPH">6.5</strong></div></div>
+      <div class="strip-metric"><span class="metric-dot violet"></span><div><small>NPK status</small><strong>Illustrative</strong></div></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">ABOUT THE PROJECT</p>
+        <h2>Healthy soil is the <span>starting point.</span></h2>
+        <p>Soil Nutrition System is an educational project concept that explains how sensors, a microcontroller, and a web interface can work together to observe soil conditions.</p>
+      </div>
+      <div class="about-grid">
+        <article class="info-card problem-card">
+          <div class="card-icon">◎</div><h3>The problem</h3>
+          <p>Soil conditions can vary across a field. Guessing moisture or nutrient needs may lead to overwatering, unnecessary fertilizer use, or poor crop growth.</p>
+        </article>
+        <article class="info-card solution-card">
+          <div class="card-icon">⌁</div><h3>The proposed solution</h3>
+          <p>Collect soil readings, send them through an IoT device, display the values on a dashboard, and provide clear guidance based on configured thresholds.</p>
+        </article>
+        <article class="info-card goal-card">
+          <div class="card-icon">↗</div><h3>Project objectives</h3>
+          <ul class="check-list"><li>Make soil data easier to understand</li><li>Support timely irrigation decisions</li><li>Encourage evidence-based soil care</li></ul>
+        </article>
+      </div>
+      <div class="notice"><strong>Important:</strong> This front-end demo does not connect to physical sensors. Nutrient values and recommendations are sample content for explaining the system. Actual N, P, and K measurements require compatible sensors or laboratory testing.</div>
+    </section>
+
+    <section class="section features-section" id="features">
+      <div class="section-heading centered">
+        <p class="eyebrow">WHAT THE APPLICATION COVERS</p>
+        <h2>One view for <span>soil awareness.</span></h2>
+        <p>Explore the main capabilities the full system can include.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">◉</div><h3>Soil moisture</h3><p>Track moisture percentage to help identify when the soil may be too dry or too wet.</p><span class="feature-tag">Sensor input</span></article>
+        <article class="feature-card"><div class="feature-icon">♨</div><h3>Temperature</h3><p>Observe soil temperature and identify changes that may affect plant growth.</p><span class="feature-tag">Sensor input</span></article>
+        <article class="feature-card"><div class="feature-icon">pH</div><h3>Soil pH</h3><p>Understand acidity or alkalinity. Many crops prefer a slightly acidic to neutral range, but needs vary.</p><span class="feature-tag">Sensor / test</span></article>
+        <article class="feature-card"><div class="feature-icon">NPK</div><h3>Nutrient awareness</h3><p>Show nitrogen, phosphorus, and potassium values when suitable measurements are available.</p><span class="feature-tag">Sensor / lab data</span></article>
+        <article class="feature-card"><div class="feature-icon">⌁</div><h3>IoT data flow</h3><p>Describe how an ESP32 or another controller can transmit readings to a server.</p><span class="feature-tag">Connectivity</span></article>
+        <article class="feature-card"><div class="feature-icon">✓</div><h3>Care suggestions</h3><p>Turn configured thresholds into easy-to-read alerts and next steps for the user.</p><span class="feature-tag">Rule-based demo</span></article>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">SYSTEM WORKING PROCESS</p>
+        <h2>From soil to <span>screen.</span></h2>
+        <p>The typical workflow below explains how the physical system and web application can exchange data.</p>
+      </div>
+      <div class="workflow">
+        <article class="workflow-step"><div class="step-top"><span class="step-number">01</span><span class="step-symbol">⌁</span></div><h3>Sense</h3><p>Soil sensors collect supported readings such as moisture and temperature. pH and NPK require suitable sensing hardware or external test data.</p><span class="step-caption">INPUT: SENSOR SIGNALS</span></article>
+        <div class="flow-arrow">→</div>
+        <article class="workflow-step"><div class="step-top"><span class="step-number">02</span><span class="step-symbol">▤</span></div><h3>Process</h3><p>A microcontroller such as ESP32 reads the sensor signals, applies calibration, and prepares a timestamped data record.</p><span class="step-caption">DEVICE: ESP32 / MCU</span></article>
+        <div class="flow-arrow">→</div>
+        <article class="workflow-step"><div class="step-top"><span class="step-number">03</span><span class="step-symbol">⌁</span></div><h3>Transmit</h3><p>The device sends data over Wi-Fi or another connection to a backend API or IoT platform using a defined data format.</p><span class="step-caption">NETWORK: WI-FI / API</span></article>
+        <div class="flow-arrow">→</div>
+        <article class="workflow-step"><div class="step-top"><span class="step-number">04</span><span class="step-symbol">▥</span></div><h3>Visualize</h3><p>The web app retrieves readings, shows trends, checks thresholds, and presents understandable status messages to the user.</p><span class="step-caption">OUTPUT: DASHBOARD</span></article>
+      </div>
+      <div class="process-detail">
+        <div><p class="eyebrow">EXAMPLE DATA RECORD</p><h3>What could be sent to the server?</h3><p>A real deployment should send calibrated readings with a device ID and timestamp. This example is illustrative only.</p></div>
+        <pre><code>{
+  "deviceId": "soil-node-01",
+  "moisture": 56,
+  "temperatureC": 27.0,
+  "ph": 6.5,
+  "recordedAt": "ISO-8601 timestamp"
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="section dashboard-section" id="dashboard">
+      <div class="dashboard-heading">
+        <div><p class="eyebrow">INTERACTIVE PREVIEW</p><h2>Soil monitoring <span>dashboard.</span></h2><p>Use the demo controls to simulate readings and see the status messages change.</p></div>
+        <div class="demo-status"><span class="pulse"></span><div><strong>SIMULATION MODE</strong><small>Not connected to hardware</small></div></div>
+      </div>
+      <div class="dashboard-layout">
+        <div class="dashboard-main">
+          <div class="reading-grid">
+            <article class="reading-card"><div class="reading-label"><span>Soil moisture</span><span class="reading-symbol">◉</span></div><div class="reading-value"><strong id="moistureValue">56</strong><span>%</span></div><div class="progress-track"><i id="moistureBar" style="width:56%"></i></div><small id="moistureStatus">Moderate moisture</small></article>
+            <article class="reading-card"><div class="reading-label"><span>Temperature</span><span class="reading-symbol">♨</span></div><div class="reading-value"><strong id="tempValue">27.0</strong><span>°C</span></div><div class="reading-foot"><span class="status-dot"></span><small id="tempStatus">Within sample range</small></div></article>
+            <article class="reading-card"><div class="reading-label"><span>Soil pH</span><span class="reading-symbol">pH</span></div><div class="reading-value"><strong id="phValue">6.5</strong><span>/ 14</span></div><div class="ph-scale"><i></i></div><small id="phStatus">Slightly acidic</small></article>
+            <article class="reading-card"><div class="reading-label"><span>Soil health index</span><span class="reading-symbol">✿</span></div><div class="reading-value"><strong id="healthValue">78</strong><span>/100</span></div><div class="progress-track"><i id="healthBar" style="width:78%"></i></div><small>Illustrative score, not a scientific diagnosis</small></article>
+          </div>
+          <div class="chart-card">
+            <div class="chart-heading"><div><h3>Reading history</h3><p>Simulated moisture readings from the latest sample window</p></div><span class="chart-legend"><i></i> Moisture (%)</span></div>
+            <div class="chart-wrap"><svg id="moistureChart" viewBox="0 0 700 190" role="img" aria-label="Illustrative moisture trend chart"></svg></div>
+            <div class="chart-xlabels"><span>Earlier</span><span>−4</span><span>−3</span><span>−2</span><span>−1</span><span>Latest</span></div>
+          </div>
+        </div>
+        <aside class="dashboard-side">
+          <div class="recommend-card"><div class="side-title"><span class="side-icon">✦</span><div><h3>Soil care insights</h3><small>Rule-based sample suggestions</small></div></div><div id="recommendations" class="recommendations"><div class="recommendation"><span>✓</span><p>Moisture is in the example's moderate range. Continue observing trends.</p></div></div></div>
+          <div class="simulator-card"><h3>Try the simulator</h3><p>Move the controls to test different conditions.</p>
+            <label for="moistureSlider">Moisture <strong><span id="moistureSliderValue">56</span>%</strong></label><input id="moistureSlider" type="range" min="0" max="100" value="56" />
+            <label for="tempSlider">Temperature <strong><span id="tempSliderValue">27</span>°C</strong></label><input id="tempSlider" type="range" min="5" max="50" value="27" />
+            <label for="phSlider">Soil pH <strong><span id="phSliderValue">6.5</span></strong></label><input id="phSlider" type="range" min="3" max="10" value="6.5" step="0.1" />
+            <div class="sim-actions"><button class="btn btn-primary btn-small" id="randomizeBtn">Simulate new sample</button><button class="btn btn-outline btn-small" id="resetBtn">Reset</button></div>
+          </div>
+          <div class="sensor-card"><div class="sensor-card-top"><span class="connection-icon">⌁</span><span class="offline-pill"><i></i> Demo only</span></div><h3>Sensor connection</h3><p>No physical sensor is connected to this page. A real implementation needs firmware and a data endpoint.</p><a href="#workflow">Review the data flow ↗</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section limitations-section">
+      <div class="limitations-icon">!</div><div><h2>Readings need context.</h2><p>Soil thresholds depend on crop type, soil texture, sensor calibration, and local conditions. Do not apply fertilizer based only on this demo. Use validated measurements and agronomic guidance before making field decisions.</p></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-copy"><p class="eyebrow">PROJECT SUMMARY</p><h2>Technology for <span>better soil care.</span></h2><p>This project demonstrates how a soil-monitoring concept can be explained through an interactive web interface. The UI can later be connected to a microcontroller and backend service.</p></div>
+      <div class="project-facts"><div><small>PROJECT AREA</small><strong>IoT • Smart Agriculture</strong></div><div><small>FRONTEND</small><strong>HTML • CSS • JavaScript</strong></div><div><small>POSSIBLE HARDWARE</small><strong>ESP32 + compatible sensors</strong></div><div><small>DATA SOURCE</small><strong>Browser simulation in this version</strong></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">✿</span><span>Soil Nutrition <b>System</b></span></a><p>Educational project interface • Simulation only</p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
